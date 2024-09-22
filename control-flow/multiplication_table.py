@@ -1,7 +1,9 @@
-number = int(input("enter a number to see its multiplication table:"))
+# multiplication_table.py
 
-multiplication_table = (1, 2, 3, 4, 5, 7, 8, 9, 10)
+# Prompt the user to input a number
+number = int(input("Enter a number to see its multiplication table: "))
 
-for x in multiplication_table:
-    product = x*number
-    print(f"{number} * {x} = {product}")
+# Generate and print the multiplication table from 1 to 10
+for i in range(1, 11):
+    product = number * i
+    print(f"{number} * {i} = {product}")
