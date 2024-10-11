@@ -41,11 +41,11 @@ class PrintBook(Book):
 
     def get_details(self):
         """Return details specific to a PrintBook, including page count."""
-        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count} pages"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
     def __str__(self):
         """String representation for the PrintBook class."""
-        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count} pages"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 
 # Composition - Library Class
