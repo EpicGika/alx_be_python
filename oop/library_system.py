@@ -11,6 +11,10 @@ class Book:
         """Return basic details of the book."""
         return f"Book: {self.title} by {self.author}"
 
+    def __str__(self):
+        """String representation for the Book class."""
+        return f"Book: {self.title} by {self.author}"
+
 
 # Derived Class - EBook
 class EBook(Book):
@@ -23,6 +27,10 @@ class EBook(Book):
         """Return details specific to an EBook, including file size."""
         return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
+    def __str__(self):
+        """String representation for the EBook class."""
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
+
 
 # Derived Class - PrintBook
 class PrintBook(Book):
@@ -33,6 +41,10 @@ class PrintBook(Book):
 
     def get_details(self):
         """Return details specific to a PrintBook, including page count."""
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count} pages"
+
+    def __str__(self):
+        """String representation for the PrintBook class."""
         return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count} pages"
 
 
@@ -52,4 +64,4 @@ class Library:
             print("No books available in the library.")
         else:
             for book in self.books:
-                print(book.get_details())
+                print(book)  # Use the __str__ method for each book
