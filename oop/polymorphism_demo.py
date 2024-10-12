@@ -1,36 +1,29 @@
 import math
 
+# Base Class - Shape
+
 
 class Shape:
-    # Define the base class
-
     def area(self):
-        # Method to calculate the area respective
-        raise NotImplementedError(
-            "The drived classes need to override this method")
+        raise NotImplementedError("Subclasses must override area() method.")
+
+# Derived Class - Rectangle
 
 
 class Rectangle(Shape):
-    # Define a drived class
     def __init__(self, length, width):
-        super().__init__()
-        # Inherits from shape class
-
         self.length = length
         self.width = width
 
     def area(self):
-
         return self.length * self.width
+
+# Derived Class - Circle
 
 
 class Circle(Shape):
-
     def __init__(self, radius):
-        super().__init__()
-
-        self.raduis = radius
+        self.radius = radius
 
     def area(self):
-
         return math.pi * (self.radius ** 2)
